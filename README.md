@@ -57,7 +57,7 @@ Input             |  Animated Output
   }
   ```
 
-  ## Contact
+## Contact
 For any question, please file an issue or contact
 ```
 Songhua Liu: songhua.liu@smail.nju.edu.cn
