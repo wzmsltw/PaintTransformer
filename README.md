@@ -18,8 +18,12 @@ ICCV 2021 (Oral)
 ## Prerequisites
 
 * Linux or macOS
-* Python 3
-* PaddlePaddle 2.0+ and other dependencies (visdom, dominate, and other common python libs)
+* Python 3.6+
+* PaddlePaddle 2.0+ and other dependencies (numpy, cv2, and other common python libs)
+
+  ```shell
+  python -m pip install paddlepaddle-gpu
+  ```
 
 ## Getting Started
 
@@ -29,6 +33,29 @@ ICCV 2021 (Oral)
   git clone https://github.com/wzmsltw/PaintTransformer
   cd PaintTransformer
   ```
+
+* Download pretrained model from [Google Drive](https://drive.google.com/file/d/1G0O81qSvGp0kFCgyaQHmPygbVHFi1--q/view?usp=sharing) and move it to inference directory:
+
+  ```shell
+  mv [Download Directory]/paint_best.pdparams inference/
+  cd inference
+  ```
+
+* Inference: 
+
+  ```shell
+  python inference.py
+  ```
+
+  * Input image path, output path, and etc can be set in the main function.
+  * Notably, there is a flag *serial* as one parameter of the main function:
+    * If *serial* is True, strokes would be rendered serially. The consumption of video memory will be low but it requires more time.
+    * If *serial* is False, strokes would be rendered in parallel. The consumption of video memory will be high but it would be faster.
+    * If animated results are required, *serial* must be True.
+
+* Train:
+
+  * You can send email to us for the training codes.
 
 ## More Results
 
@@ -42,7 +69,7 @@ Input             |  Animated Output
 
 * Do not want to run the code? Try an App [_一刻相册_](https://photo.baidu.com/) downloaded from [here](https://photo.baidu.com/union/youa/home)!
 
-<img src="https://github.com/Huage001/PaintTransformer/blob/main/picture/yike.jpg" width="500px"/>
+<img src="https://github.com/wzmsltw/PaintTransformer/blob/main/picture/yike.jpg" width="500px"/>
 
 ## Citation
 
