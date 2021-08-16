@@ -2,6 +2,9 @@
 
 > [[Paper](https://arxiv.org/abs/2108.03798)] [[Paddle Implementation](https://github.com/wzmsltw/PaintTransformer)]
 
+## Update
+
+We have optimized the *serial* inference procedure to achieve better rendering quality and faster speed.
 
 ## Overview
 
