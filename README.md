@@ -49,7 +49,7 @@ ICCV 2021 (Oral)
 
   * Input image path, output path, and etc can be set in the main function.
   * Notably, there is a flag *serial* as one parameter of the main function:
-    * If *serial* is True, strokes would be rendered serially. The consumption of video memory will be low but it requires more time.
+    * If *serial* is True, strokes would be rendered serially. The consumption of video memory will be low but it requires more time. **Serial inference can achieve better rendering quality.**
     * If *serial* is False, strokes would be rendered in parallel. The consumption of video memory will be high but it would be faster.
     * If animated results are required, *serial* must be True.
 
